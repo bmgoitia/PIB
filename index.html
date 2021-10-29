@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+		</style>
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	animationDuration: 6000,
+	axisX: {
+        labelAngle: -60,
+				interval: 1
+    },
+		
+	theme: "light2",
+	title:{
+		text: "PIB- Variación trimestral",
+		fontColor: "#001c4c",
+		fontFamily: "Playfair Display"
+	},
+	data: [{        
+		type: "line",
+		color: "#001c4c",
+      	indexLabelFontSize: 16,
+		dataPoints: [
+			{ label: "2018T1", y: 0.3776},
+			{ label: "2018T2", y: 0.5863},
+			{ label: "2018T3", y: 0.5177},
+			{ label: "2018T4", y: 0.6747},
+			{ label: "2019T1", y: 0.6013},
+			{ label: "2019T2", y: 0.3657},
+			{ label: "2019T3", y: 0.3791},
+			{ label: "2019T4", y: 0.3764},
+			{ label: "2020T1", y: -5.3911},
+			{ label: "2020T2", y: -17.6521},
+			{ label: "2020T3", y: 16.7984},
+			{ label: "2020T4", y: 0.2226},
+			{ label: "2021T1", y: -0.6320},
+			{ label: "2021T2", y: 1.0575},
+			{ label: "2021T3", y: 2.0120},
+			
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="canvasjs.min.js"></script>
+</body>
+</html>
